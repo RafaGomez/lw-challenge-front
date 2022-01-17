@@ -1,0 +1,21 @@
+.container {
+  width: 50rem;
+  margin: auto;
+}
+
+.container > input {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.translate {
+  display: block;
+  margin: auto;
+}
+
+.container__button {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

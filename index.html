@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+
+<body>
+
+    <div id="app" class="container">
+        <!-- input text for connection string -->
+        <input type="text" class="input is-primary" v-model="apiUrl" placeholder="Enter api URL">
+        <!-- select for the original language -->
+
+        <div class="select is-primary">
+            <select v-model="originalLanguage">
+                <option value="0" selected>English</option>
+                <option value="1">German</option>
+                <option value="2">French</option>
+            </select>
+        </div>
+        <!-- two inputs, one for the text to translate and other one to translated text -->
+        <textarea class="textarea is-primary" v-model="originalText" placeholder="Enter text to translate"></textarea>
+
+        <!-- button to lauch the translation -->
+        <div class="container__button">
+            <button class="button is-primary" v-on:click="translate" :disabled='isLoading'>Translate!</button>
+        </div>
+        <div class="select is-primary">
+            <select v-model="targetLanguage">
+                <option value="0">English</option>
+                <option value="1" selected>German</option>
+                <option value="2">French</option>
+            </select>
+        </div>
+        <textarea class="textarea is-primary" v-model="translatedText" placeholder="Translated text"></textarea>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
